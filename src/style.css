@@ -1,0 +1,94 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  margin: 100px 170px;
+}
+
+header {
+  background-image: linear-gradient(
+      rgba(39, 32, 68, 0.7),
+      rgba(39, 32, 68, 0.7)
+    ),
+    url("../media/lublin-header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+.header-content {
+  padding: 280px 290px;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 144px;
+}
+header h2 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 60px;
+  margin-bottom: 84px;
+}
+header h3 {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 5px;
+}
+header a {
+  text-decoration: none;
+  color: #272044;
+  background-color: #fff;
+  padding: 16px 32px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 3px;
+}
+
+footer {
+  background-image: linear-gradient(
+      rgba(39, 32, 68, 0.7),
+      rgba(39, 32, 68, 0.7)
+    ),
+    url("../media/lublin-footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+footer ul {
+  list-style: none;
+  opacity: 0.7;
+  padding: 0;
+}
+footer a {
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+footer p {
+  opacity: 0.7;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+footer h4 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+footer .grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-gap: 60px;
+  padding: 100px 170px;
+}
+
+main {
+  height: 70px;
+}
