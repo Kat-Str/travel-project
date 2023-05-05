@@ -4,6 +4,19 @@ body {
 .container {
   padding: 100px 170px;
 }
+.animated-btn {
+  transition: all 0.3s ease-in-out;
+}
+.animated-btn:hover {
+  background-color: transparent;
+  border: solid #462cb3 2px;
+  color: #462cb3;
+}
+header .animated-btn:hover {
+  background-color: transparent;
+  border: solid #fff 2px;
+  color: #fff;
+}
 
 header {
   background-image: linear-gradient(
@@ -144,6 +157,12 @@ main .places-cards .grid {
 }
 main .places-cards .card {
   background-color: #fff;
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+main .places-cards .card:hover {
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.25);
+  scale: 1.1;
 }
 main .places-cards .card-grid {
   display: grid;
@@ -197,6 +216,7 @@ main .places-cards a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border: solid transparent 2px;
 }
 main .places-cards .learn-more-btn {
   display: flex;
@@ -221,4 +241,10 @@ main .lublin-photos .photo-grid {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
   margin-top: 50px;
+}
+main .lublin-photos .photo {
+  transition: all 0.3s ease-in-out;
+}
+main .lublin-photos .photo:hover {
+  scale: 1.3;
 }
