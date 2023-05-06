@@ -1,6 +1,9 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+.adjust-width {
+  width: 100%;
+}
 .container {
   padding: 100px 170px;
 }
@@ -26,17 +29,21 @@ header {
     url("../media/lublin-header.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   color: #fff;
   text-align: center;
-}
-.header-content {
-  padding: 280px 290px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header h1 {
   font-weight: 700;
   font-size: 96px;
-  line-height: 144px;
+  /* line-height: 144px; */
+  margin: 0;
+  max-width: 80vw;
 }
 header h2 {
   font-weight: 400;
@@ -49,6 +56,8 @@ header h3 {
   font-size: 24px;
   line-height: 36px;
   letter-spacing: 5px;
+  margin: 0;
+  text-transform: uppercase;
 }
 header a {
   text-decoration: none;
@@ -59,6 +68,7 @@ header a {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 footer {
@@ -99,11 +109,15 @@ footer .grid {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
   grid-gap: 60px;
-  padding: 100px 170px 50px;
+  padding: 50px 170px 30px;
 }
 footer .github-link {
   text-align: center;
   padding-bottom: 40px;
+}
+footer .github-link a {
+  opacity: 1;
+  font-weight: bold;
 }
 
 main {
@@ -152,13 +166,16 @@ main .places-cards {
 main .places-cards .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
   padding: 0 80px 170px;
 }
 main .places-cards .card {
   background-color: #fff;
   box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
+  max-width: 433.2px;
+  max-height: fit-content;
 }
 main .places-cards .card:hover {
   box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.25);
@@ -176,6 +193,7 @@ main .card-grid iframe {
 main .card-grid img {
   width: 215px;
   height: 149.8px;
+  min-width: 100%;
 }
 
 main .places-cards h4 {
@@ -247,4 +265,98 @@ main .lublin-photos .photo {
 }
 main .lublin-photos .photo:hover {
   scale: 1.3;
+}
+
+@media (max-width: 1300px) {
+  main .why-lublin .grid {
+    grid-template-columns: 1fr;
+  }
+  main .lublin-photos .photo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  footer .grid {
+    padding: 50px 50px 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 50px;
+  }
+
+  header h1 {
+    font-size: 46px;
+  }
+  header h2 {
+    font-size: 20px;
+  }
+  header h3 {
+    font-size: 20px;
+  }
+
+  main .why-lublin .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+
+  main .places-cards .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+    padding: 0 80px 70px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .places-cards .card {
+    max-width: 80vw;
+    max-height: fit-content;
+  }
+
+  main .places-cards .card-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .castle {
+    background-image: url("/media/tourist-attractions/lublin-castle.jpg");
+  }
+  .village {
+    background-image: url("/media/tourist-attractions/village-museum.jpg");
+  }
+  .old-town {
+    background-image: url("/media/tourist-attractions/old-town.jpg");
+  }
+
+  main .places-cards h5 {
+    text-align: center;
+    padding-top: 60px;
+  }
+
+  main .lublin-photos .photo-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    margin-top: 50px;
+  }
+
+  footer .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 50px 30px;
+  }
+  footer .github-link {
+    padding: 0 30px 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  main .places-cards .card .embed {
+    display: none;
+  }
+  main .places-cards .card-grid img {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80vw;
+    height: fit-content;
+  }
 }
